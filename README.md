@@ -1,24 +1,13 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 概要
+家のティッシュやラップ、必要なときにないとイライラするけど、あまり沢山は抱えたくない。
+家の全消耗品の管理をします。
+# 言語・デプロイ環境
+Rails
+# 仕様
+半年と決めたら、半年に一度まとめて買えばいいように保有最適数を自動計算します。
+楽天の買い物かごに入れるところまで自動で行い、最後に楽天に行って確認してボタン一で決済できます。
+# 工夫点・作成記
+このアプリと楽天の自分のアカウントとの行き来にスクレイピングを使っています。
+このアプリから楽天にログインが必要なので楽天のパスワードを入力しなければなりませんが、マスクして安全にしています。
+スクレイピングは処理に時間がかかるので、Active Jobというバックグラウンド処理を行う技術を使っています。
+※こだわて作ったアプリでしたが、楽天が突然このスクレイピングを弾く仕様にしてしまったので、使えなくなってしまいました。
