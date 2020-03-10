@@ -1,0 +1,18 @@
+.sessionfront
+  .sessionfront__container
+    .sessionfront__container__forms
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: " メールアドレス", class: "sessionfront__container__forms__form form"
+        = f.password_field :password, autocomplete: "current-password", placeholder: " パスワード", class: "sessionfront__container__forms__form form"
+        -# - if devise_mapping.rememberable?
+        -#   .field
+        -#     = f.check_box :remember_me
+        -#     = f.label :remember_me
+        = f.submit "ログイン", class: "sessionfront__container__forms__submit submit1"
+    .sessionfront__container__registration
+      = render "devise/shared/links"
+.sessionback
+  - 25.times do
+    .sessionback__column
+      - @e_images.shuffle.each do |e|
+        = image_tag e, class: "sessionback__column__image"

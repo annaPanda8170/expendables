@@ -1,0 +1,80 @@
+.header{
+  height: 70px;
+   padding: 15px;
+   outline: 1px solid red;
+  &__ulist{
+    float: right;
+    &__li{
+      display: inline-block;
+      line-height: 40px;
+      font-size: 30px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.main{
+  height: calc(100vh - 110px);
+  padding: 20px;
+  &__table{
+    width: calc(100% /3);
+    outline: 1px solid red;
+    float: left;
+    &__h{
+      height: 35px;
+      &__name1, &__name2{
+        outline: 1px solid blue;
+        width: 25%;
+        text-align: center;
+      }
+      &__name3, &__name4, &__name5, &__name6{
+        outline: 1px solid blue;
+        width: calc(50% /4);
+        text-align: center;
+      }
+    }
+    &__d{
+      &__info1, &__info2{
+        outline: 1px solid blue;
+        width: 25%;
+        text-align: center;
+      }
+      &__info3, &__info4, &__info5, &__info6{
+        outline: 1px solid blue;
+        width: calc(50% /4);
+        text-align: center;
+      }
+      &__info5__number{
+        width: 48px;
+        height: 50px;
+      }
+      &__info5__number:focus{
+        outline: 0;
+      }
+      &__info6__delete{
+        display: inline-block;
+        height: 30px;
+        width: 50px;
+        line-height: 27px;
+        border: 1.5px solid red;
+        border-radius: 15px;
+      }
+    }
+    &__d{
+      &__image{
+        height: 90px;
+      }
+    }
+    
+  }
+}
+
+
+
+
+.footer{
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  outline: 1px solid red;
+}

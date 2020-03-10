@@ -1,0 +1,48 @@
+.header
+  %ul.header__ulist
+    %li.header__ulist__li
+      =link_to new_expendable_path do
+        消耗品登録
+    %li.header__ulist__li
+      =link_to destroy_user_session_path, method: :delete do
+        ログアウト
+.main
+  = form_tag buy_expendables_path, method: :post do
+    -# - @expendables.each_slice(6) do |expendables|
+    - 3.times do 
+      %table.main__table
+        %tr.main__table__h
+          %th.main__table__h__name1
+          %th.main__table__h__name2
+            消耗品名
+          %th.main__table__h__name3
+            最小個数
+          %th.main__table__h__name4
+            最大個数
+          %th.main__table__h__name5
+            購入個数
+          %th.main__table__h__name6
+    - @expendables.each_slice(6) do |expendables|
+      %table.main__table
+        - expendables.each do |e|
+          %tr.main__table__d
+            %td.main__table__d__info1
+              - if e.image == nil
+                画像取得中
+              - else
+                = image_tag e.image, class: "main__table__d__image"
+            %td.main__table__d__info2
+              = e.name
+            %td.main__table__d__info3
+              = 20/e.quantity
+            %td.main__table__d__info4
+              = (@period*30)/e.quantity
+            %td.main__table__d__info5
+              = select_tag :"exp-id-#{e.id}", options_for_select((0.."#{e.max_quantity}".to_i), selected: '0'), class: 'main__table__d__info5__number'
+            %td.main__table__d__info6
+              =link_to expendable_path(e.id), method: :delete, class: 'main__table__d__info6__delete' do
+                消去
+    .footer
+      楽天のパスワード
+      = password_field_tag :buy_password,"" ,class: "d"
+      = submit_tag "買い物かごに入れる"

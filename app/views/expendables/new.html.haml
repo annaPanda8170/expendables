@@ -1,0 +1,9 @@
+= form_for @expendable do |f|
+  消耗品名
+  = f.text_field :name, class: "a"
+  楽天でのURL
+  = f.text_field :url, class: "b"
+  予想1個の消費日数（1個は楽天での注文単位）
+  = f.select :quantity, options_for_select(@quantity, selected: '45'), class: "c"
+  日
+  = f.submit "登録"

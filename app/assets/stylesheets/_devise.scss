@@ -1,0 +1,134 @@
+.sessionfront{
+  // background: -moz-linear-gradient(65deg, #F13F79, #FFC778); 
+  // background: -webkit-linear-gradient(65deg, #F13F79, #FFC778); 
+  // background: linear-gradient(25deg, #F13F79, #FFC778); 
+  // background: -moz-linear-gradient(right, transparent);
+  // background: -webkit-linear-gradient(right, transparent);
+  background: linear-gradient(76deg, rgba(7, 35, 36, 0.98), rgba(30, 187, 124, 0.96) 37%, rgba(45, 197, 144, 0.94) 50%,rgba(170, 202, 133, 0.8) 70%,transparent);
+  float: left;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  &__container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__forms{
+      color: white;
+      padding-bottom: 50px;
+      width: 510px;
+      // outline: 1px solid red;
+      text-align: center;
+
+      &__form{
+        margin: 15px 0px;
+      }
+      &__submit {
+        margin-top: 40px;
+        background: linear-gradient(76deg, rgba(173, 236, 160, 0.6), rgba(40, 179, 123, .6) 45%,rgba(7, 35, 36, .6) 98%);
+      }
+    }
+    &__registration{
+      padding-left: 150px;
+      padding-bottom: 70px;
+      text-align: center;
+      width: 510px;
+      // outline: 1px solid red;
+    }
+  }
+}
+
+.to_signin_submit{
+  background: linear-gradient(76deg, rgba(160, 236, 216, 0.6), rgba(40, 130, 130, .6) 45%, rgba(0, 79, 79, .6) 96%);
+}
+
+.sessionback{
+  display: flex;
+  flex-direction: row-reverse;
+  &__column{
+    height: 100vh;
+    overflow: hidden;
+    font-size:0;
+    width: 80px;
+    &__image{
+      width: 80px;
+      filter: saturate(45%) sepia(30%) invert(20%);
+    }
+  }  
+}
+
+
+
+.registrationsfront{
+  // background: -moz-linear-gradient(65deg, #F13F79, #FFC778); 
+  // background: -webkit-linear-gradient(65deg, #F13F79, #FFC778); 
+  // background: linear-gradient(25deg, #F13F79, #FFC778); 
+  // background: -moz-linear-gradient(right, transparent);
+  // background: -webkit-linear-gradient(right, transparent);
+  background: linear-gradient(284deg, rgba(7, 21, 36, 0.98), rgba(40, 121, 179, 0.96) 37%, rgba(40, 142, 179, 0.94) 50%,rgba(133, 202, 178, 0.8) 70%,transparent);
+  float: left;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  &__container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__forms{
+      font-size: 19px;
+      font-weight: bold;
+      color: white;
+      // padding-right: 120px;
+      padding-bottom: 50px;
+      width: 510px;
+      // outline: 1px solid red;
+      text-align: center;
+
+      &__form{
+        margin: 15px 0px;
+      }
+      &__period{
+        margin: 15px 0px;
+        width: 65px;
+        color: white;
+        text-align: center;
+      }
+      &__submit {
+        margin-top: 40px;
+        background: linear-gradient(284deg, rgba(160, 236, 216, 0.6), rgba(40, 130, 130, .6) 45%, rgba(0, 79, 79, .8) 96%);
+      }
+    }
+    &__session{
+      padding-right: 150px;
+      padding-bottom: 70px;
+      text-align: center;
+      width: 510px;
+      // outline: 1px solid red;
+    }
+  }
+}
+
+.to_login_submit{
+  background: linear-gradient(284deg, rgba(149, 195, 140, 0.6), rgba(43, 163, 115, 0.6) 45%,rgba(7, 35, 36, .6) 98%);
+}
+
+.registrationsback{
+  display: flex;
+  flex-direction: row-reverse;
+  &__column{
+    height: 100vh;
+    overflow: hidden;
+    font-size:0;
+    width: 80px;
+    &__image{
+      width: 80px;
+      filter: saturate(45%) sepia(30%) invert(20%);
+    }
+  }  
+}

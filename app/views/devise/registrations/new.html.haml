@@ -1,0 +1,26 @@
+.registrationsfront
+  .registrationsfront__container
+    .registrationsfront__container__session
+      = render "devise/shared/links"
+    .registrationsfront__container__forms
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        -# = render "devise/shared/error_messages", resource: resource
+        = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: " お名前", class: "registrationsfront__container__forms__form form"
+        = f.email_field :email, autocomplete: "email", placeholder: " 楽天と同じメールアドレス", class: "registrationsfront__container__forms__form form"
+        = f.password_field :password, autocomplete: "new-password", placeholder: " パスワード", class: "registrationsfront__container__forms__form form"
+        = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: " パスワード（もう一度）", class: "registrationsfront__container__forms__form form"
+        %br
+        購入スパン&nbsp;&nbsp;
+        = f.select :period, options_for_select((1..12), selected: '1'), {}, {class: "registrationsfront__container__forms__period form"}
+        ヶ月
+        %br
+        -# - if devise_mapping.rememberable?
+        -#   .field
+        -#     = f.check_box :remember_me
+        -#     = f.label :remember_me
+        = f.submit "会員登録", class: "registrationsfront__container__forms__submit submit1"
+.registrationsback
+  - 25.times do
+    .registrationsback__column
+      - @e_images.shuffle.each do |image|
+        = image_tag image, class: "registrationsback__column__image"
